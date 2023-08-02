@@ -230,6 +230,25 @@ header {
     color: white;
   }
 
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+/*Scroll Bar */
+  :root{
+  --radius-8: 8px;
+  --banner-background: hsla(250, 6%, 20%, 1);
+  }
+
+ 
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: var(--banner-background);
+    border-radius: var(--radius-8);
+  }
+
+
   
 
 
