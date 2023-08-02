@@ -1,5 +1,4 @@
-// JavaScript code for the home page
-// (Trending movies, Recent Movies, and Upcoming Movies sections)
+
 
 // Your API Key from TMDb
 const apiKey = '829a43a98259bc44cae297489c7e3bba';
@@ -8,7 +7,7 @@ const recentMoviesRow = document.getElementById('recentMoviesRow');
 const topRatedMoviesRow = document.getElementById('topRatedMoviesRow');
 const upcomingMoviesRow = document.getElementById('upcomingMoviesRow');
 
-const totalPages = 5; // Adjust the number of total pages you want to display
+const totalPages = 5;
 
 // Function to fetch and display movie thumbnails for a specific category
 async function displayMovieThumbnails(category, container) {
@@ -35,7 +34,6 @@ function createThumbnailElement(movie) {
   const thumbnailElement = document.createElement('div');
   thumbnailElement.classList.add('homeThumbnail');
 
-  // Customize the thumbnail display as needed
   thumbnailElement.innerHTML = `
     <img src="https://image.tmdb.org/t/p/w200${movie.poster_path}" alt="${movie.title}">
     <p class="title">${movie.title}</p>
@@ -66,7 +64,7 @@ function createThumbnailElement(movie) {
   return thumbnailElement;
 }
 
-// Call the function to display movie thumbnails for each row
+
 displayMovieThumbnails('now_playing', recentMoviesRow);
 displayMovieThumbnails('top_rated', topRatedMoviesRow);
 displayMovieThumbnails('upcoming', upcomingMoviesRow);
@@ -76,7 +74,7 @@ displayMovieThumbnails('upcoming', upcomingMoviesRow);
 
 
 
-// Add your search functionality here
+// Search functionality 
 function searchMovies(query) {
   const searchUrl = `https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&language=en-US&region=IN&query=${query}&adult=false`;
   return fetch(searchUrl)
@@ -124,7 +122,7 @@ document.getElementById('searchButton').addEventListener('click', () => {
 
           console.log('Search button clicked!');
 
-          // Hide other sections and show search results section
+        
           document.getElementById('topRatedMoviesSection').style.display = 'none';
           document.getElementById('recentMoviesSection').style.display = 'none';
           document.getElementById('upcomingMoviesSection').style.display = 'none';
@@ -137,9 +135,9 @@ document.getElementById('searchButton').addEventListener('click', () => {
   });
 
   
-// Handle back button click event
+
 document.getElementById('backButton').addEventListener('click', () => {
-  // Show other sections and hide search results section
+
   document.getElementById('topRatedMoviesSection').style.display = 'block';
   document.getElementById('recentMoviesSection').style.display = 'block';
   document.getElementById('upcomingMoviesSection').style.display = 'block';
