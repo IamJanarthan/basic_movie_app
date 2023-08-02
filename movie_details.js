@@ -1,4 +1,4 @@
-// API Key from TMDb
+
 const apiKey = '829a43a98259bc44cae297489c7e3bba';
 
 // Fetch movie details by ID
@@ -28,7 +28,7 @@ function getLanguageName(code) {
 
 
 
-// Display movie details on the movie details page
+
 function displayMovieDetails(movie) {
   const movieDetailsContainer = document.getElementById('movieDetails');
   movieDetailsContainer.innerHTML = `
