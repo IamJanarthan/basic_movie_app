@@ -24,16 +24,20 @@
 
 <body>
   <header>
-    <a href="./index.html"><h1>Movie Library</h1></a>
-    
+    <div class="appName">
+       <a href="./index.html"><h1>Movie Library</h1></a>
+    </div>
+
+    <div class="header-buttons">
+      <a href="./Login & Sign in Page/Login.html"> <button id="loginButton">Login/Sign in</button>  </a>
+    </div>
+
     <div class="search-box">
       <input type="text" id="searchInput" placeholder="Search movies...">
       <button id="searchButton">Search</button>
     </div>
 
-    <div class="header-buttons">
-       <a href="./Login & Sign in Page/Login.html"> <button id="loginButton">Login/Sign in</button>  </a>
-    </div>
+    
 
   
 
@@ -76,7 +80,7 @@
       <div class="thumbnails-row" id="upcomingMoviesRow"></div>
     </section>
 
-    <section id="searchResultsSection"  style="display: none;">
+    <section id="searchResultsSection" class="thumbnails-container" style="display: none;">
         <h2>Search Results</h2>
         <div class="movies-grid" id="searchResults"></div>
     </section>

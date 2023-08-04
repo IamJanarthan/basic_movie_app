@@ -128,7 +128,7 @@ body {
   
   .movie-info {
     color: #fff;
-    padding: 20px;
+    
   }
   
 header {
@@ -248,6 +248,80 @@ header {
     border-radius: var(--radius-8);
   }
 
+
+ @media screen and  (max-width: 600px){
+
+  body{
+    height: 100%;
+    width: 100%;
+  }
+  .backdrop{
+    
+    background-size: cover;
+    background-position: center;
+  }
+  h1{
+    display: inline;
+    font-size: 15px;
+  }
+  .header{
+    position: fixed;
+  }
+  h2{
+    font-size: 20px;
+    display: block;
+  }
+  .appName{
+    margin: auto;
+    margin-left: 0px ;
+    margin-bottom: 10px;
+  }
+  .search-box{
+    margin: auto;
+  }
+  /* .header-buttons{
+    position: absolute;
+    margin-top: 0;
+    top: 10px;
+    right: 20px;
+  } */
+  #loginButton{
+    display: inline-block;
+    margin-bottom: 5px;
+    margin-left: 0px;
+    
+  }
+
+  .movie-details img{
+    max-width: 150px;
+  }
+  .movie-poster{
+    margin: 0;
+  }
+  
+  #movieTitle{
+    display: inline-block;
+    font-size: 20px;
+    padding: 5px 5px;
+  
+  }
+
+  #movieOverview{
+    font-size: 15px;
+  }
+  .movie-info {
+    font-size: 15px;
+  }
+
+
+
+
+  
+ 
+ }
+
+  
+ 
 
   
 
